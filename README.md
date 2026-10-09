@@ -46,10 +46,12 @@ These findings show associations between customer characteristics and churn; the
 
 ## Project Components
 
-- `churn_analysis.py` — Python data analysis and visualizations.
-- `customer_churn_setup.sql` — SQL database setup.
-- `customer_churn_analysis.sql` — SQL queries for churn analysis.
-- `customer_churn_dashboard.pbix` — Power BI dashboard.
+- `churn_analysis.py` — Python-based data analysis using Pandas and Matplotlib.
+- `import_churn.py` — Imports the customer churn dataset into MySQL.
+- `customer_churn_setup.sql` — Creates the database table and verifies its structure.
+- `customer_churn_analysis.sql` — Contains 18 SQL queries for customer churn analysis.
+- `customer_churn_dashboard.pbix` — Interactive Power BI dashboard with KPI cards, charts, and a contract slicer.
+- `Customer_churn_analysis_dashboard.png` — Screenshot preview of the Power BI dashboard.
 - `churn_by_contract.png` — Churn rate by contract type.
 - `churn_by_tenure.png` — Churn rate by customer tenure.
 - `churn_by_internet_service.png` — Churn rate by internet service.
@@ -73,6 +75,27 @@ These findings show associations between customer characteristics and churn; the
 
 5. Open the SQL scripts in MySQL Workbench to run the database analysis.
 6. Open `customer_churn_dashboard.pbix` in Power BI Desktop to explore the dashboard.
+
+## Importing Data into MySQL
+
+The `import_churn.py` script loads the Telco Customer Churn dataset into the MySQL database.
+
+### Prerequisites
+- MySQL Server installed and running.
+- Python packages installed:
+
+  `pip install pandas mysql-connector-python`
+
+- Download the dataset from [Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) and place `Customer-Churn_Telco_Clean.csv` in the project folder.
+- Create the `customer_churn` database and `customers` table using `customer_churn_setup.sql`.
+
+### Configure the database password
+
+Set the `MYSQL_PASSWORD` environment variable in your terminal before running the script. Do not put your actual database password in the source code.
+
+### Run the script
+
+`python import_churn.py`
 
 ## Disclaimer
 
