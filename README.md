@@ -4,6 +4,12 @@
 
 This project analyzes customer churn for a telecommunications company using Python, MySQL, and Power BI. The objective is to identify customer segments associated with higher churn rates and present business insights through data analysis and visualizations.
 
+## Dashboard Preview
+
+![Customer Churn Analysis Dashboard](Customer_churn_analysis_dashboard.png)
+
+The Power BI dashboard summarizes customer churn through KPI cards and visualizations covering contract type, internet service, customer type, tech support, tenure, and payment method.
+
 ## Tools & Technologies
 
 - **Python:** Pandas, Matplotlib
